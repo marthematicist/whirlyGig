@@ -76,6 +76,7 @@ class Chain {
 }
 
 function setup() {
+  console.log( 'hi' );
   setupGlobalVariables();
   createCanvas( xRes , yRes );
   background( bgColor );
