@@ -86,13 +86,13 @@ function setup() {
   background( bgColor );
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
-  C1 = new Chain( chainCenter, numArms );
+  C = new Chain( chainCenter, numArms );
 }
 
 function draw() {
   console.log( C1 );
-  C1.evolve( 0.1 );
-  C1.drawEnd();
+  C.evolve( 0.1 );
+  C.drawEnd();
 }
   
 
