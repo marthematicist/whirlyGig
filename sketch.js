@@ -56,7 +56,6 @@ class Chain {
     for( var i = 0 ; i < nArms ; i++ ) {
       this.arms[i] = new Arm( currentCenter );
       currentCenter = this.arms[i].end;
-      console.log(currentCenter);
     }
     this.end = currentCenter;
     
@@ -104,7 +103,7 @@ function setup() {
 }
 
 function draw() {
-  for( var i = 0 ; i < 100 ; i++ ) {
+  for( var j = 0 ; j < 100 ; j++ ) {
     
     for( var i = 0 ; i < numChains ; i++ ){
       CA[i].evolve( deltaT );
