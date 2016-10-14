@@ -25,14 +25,14 @@ setupGlobalVariables = function() {
 
 class Arm {
   constructor( centerIn ) {
-    this.centerP = createVector( centerIn.x, centerIn.y );
+    this.center = createVector( centerIn.x, centerIn.y );
     this.radius = random( minRadius , maxRadius );
     this.angle = random( 0 , 2*PI);
     this.angVel = random( minAngVel , maxAngVel );
     if( random(0,1) > pClockwise ) {
       this.angVel *= -1;
     }
-    this.end = createVector( this.centerP.x + this.radius*cos( this.angle ) , this.centerP.y + this.radius*sin( this.angle ) );
+    this.end = createVector( this.center.x + this.radius*cos( this.angle ) , this.center.y + this.radius*sin( this.angle ) );
   }
 }
   
