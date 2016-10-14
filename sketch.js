@@ -53,8 +53,10 @@ class Chain {
     for( var i = 0 ; i < nArms ; i++ ) {
       this.arms[i] = new Arm( currentCenter );
       currentCenter = this.arms[i].end;
+      console.log(currentCenter);
     }
     this.end = currentCenter;
+    
   }
 }
   
