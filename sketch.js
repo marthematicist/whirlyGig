@@ -43,9 +43,9 @@ class Arm {
 
 class Chain {
   contructor( center , nArms ) {
+    console.log( 'Consturcting new Chain' );
     this.color = color( random(0,100) , 100 , 100 , fillAlpha );
     this.center = createVector( center.x , center.y );
-    console.log( this.center.x );
     var currentCenter = createVector( center.x , center.y );
     for( var i = 0 ; i < nArms ; i++ ) {
       this.arms[i] = new Arm( currentCenter );
