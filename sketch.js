@@ -10,7 +10,7 @@ setupGlobalVariables = function() {
   
   numArms = 3;
   minRadius = 0.1*minRes;
-  maxRadius = maxRes / numArms * 1.2;
+  maxRadius = maxRes / numArms * 0.8;
   
   minAngVel = PI*0.01;
   maxAngVel = PI*0.2;
