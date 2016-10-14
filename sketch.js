@@ -27,7 +27,7 @@ class Arm {
   constructor( centerIn ) {
     this.centerP = createVector( centerIn.x, centerIn.y );
     this.radius = random( minRadius , maxRadius );
-    this.angle = 0;
+    this.angle = random( 0 , 2*PI);
     this.angVel = random( minAngVel , maxAngVel );
     if( random(0,1) > pClockwise ) {
       this.angVel *= -1;
