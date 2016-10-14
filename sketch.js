@@ -93,12 +93,13 @@ function setup() {
   background( bgColor );
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
-  
+  /*
   CA = new Array( numChains );
   for( var i = 0 ; i < numChains ; i++ ){
     CA[i] = new Chain( chainCenter, numArms );
   }
-  
+  */
+  C = new Chain( chainCenter, numArms );
   noStroke();
 }
 
@@ -111,8 +112,8 @@ function draw() {
       CA[i].drawEnd();
     }
     */
-    CA[1].evolve( deltaT );
-    CA[1].drawEnd();
+    C.evolve( deltaT );
+    C.drawEnd();
   }
   //C.drawChain();
 }
