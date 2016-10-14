@@ -80,7 +80,7 @@ Chain.prototype.drawEnd = function() {
 
 
 function setup() {
-  console.log( 'hi there' );
+  console.log( 'hi there you' );
   setupGlobalVariables();
   createCanvas( xRes , yRes );
   background( bgColor );
