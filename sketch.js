@@ -64,8 +64,8 @@ class Chain {
   }
   
   drawEnd() {
-    var x = this.arms[arms.length-1].end.x;
-    var y = this.arms[arms.length-1].end.y;
+    var x = this.arms[this.arms.length-1].end.x;
+    var y = this.arms[this.arms.length-1].end.y;
     fill( this.color );
     ellipse( x , y , drawSize , drawSize );
   }
