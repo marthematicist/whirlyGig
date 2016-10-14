@@ -34,12 +34,13 @@ class Arm {
     }
     this.end = createVector( this.center.x + this.radius*cos( this.angle ) , this.center.y + this.radius*sin( this.angle ) );
   }
-  
-  rotate( dt ) {
-    this.angle += this.angVel*dt;
-    this.end = createVector( this.center.x + this.radius*cos( this.angle ) , this.center.y + this.radius*sin( this.angle ) );
-  }
 }
+  
+Arm.prototype.rotate = function( dt ) {
+  this.angle += this.angVel*dt;
+  this.end = createVector( this.center.x + this.radius*cos( this.angle ) , this.center.y + this.radius*sin( this.angle ) );
+}
+
 
 class Chain {
   contructor( center , nArms ) {
@@ -55,27 +56,28 @@ class Chain {
     this.end = currentCenter;
     console.log(this.end.x);
   }
-  
-  evolve( dt ) {
-    var currentCenter = this.center;
-    for( var i = 0 ; i < this.n ; i++ ) {
-      this.arms[i].center = currentCenter;
-      this.arms[i].rotate( dt );
-      currentCenter = this.arms[i].end;
-    }
-    this.end = currentCenter;
-    
-    console.log( this.center );
-  }
-  
-  drawEnd() {
-    //console.log( this.end );
-    var x = this.end.x;
-    var y = this.end.y;
-    fill( this.color );
-    ellipse( x , y , drawSize , drawSize );
-  }
 }
+  
+Chain.prototype.evolve = function( dt ) {
+  var currentCenter = this.center;
+  for( var i = 0 ; i < this.n ; i++ ) {
+    this.arms[i].center = currentCenter;
+    this.arms[i].rotate( dt );
+    currentCenter = this.arms[i].end;
+  }
+  this.end = currentCenter;
+
+  console.log( this.center );
+}
+
+Chain.prototype.drawEnd = function() {
+  //console.log( this.end );
+  var x = this.end.x;
+  var y = this.end.y;
+  fill( this.color );
+  ellipse( x , y , drawSize , drawSize );
+}
+
 
 function setup() {
   console.log( 'hi' );
