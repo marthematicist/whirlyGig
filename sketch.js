@@ -89,7 +89,7 @@ function setup() {
 }
 
 function draw() {
-  C.evolve( 1 );
+  C.evolve( 0.1 );
   C.drawEnd();
 }
   
