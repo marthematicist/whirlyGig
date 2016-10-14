@@ -53,7 +53,7 @@ class Chain {
       currentCenter = this.arms[i].end;
     }
     this.end = currentCenter;
-    console.log(this.end);
+    console.log(this.end.x);
   }
   
   evolve( dt ) {
