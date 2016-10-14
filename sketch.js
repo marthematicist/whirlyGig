@@ -86,7 +86,7 @@ function setup() {
 }
 
 function draw() {
-  console.log( 'drawing' );
+  console.log( C1 );
   C1.evolve( 0.1 );
   C1.drawEnd();
 }
