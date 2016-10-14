@@ -97,9 +97,11 @@ function setup() {
 }
 
 function draw() {
-  C.evolve( 0.01 );
-  C.drawEnd();
-  C.drawChain();
+  for( var i = 0 ; i < 100 ; i++ ) {
+    C.evolve( 0.01 );
+    C.drawEnd();
+  }
+  //C.drawChain();
 }
   
 
