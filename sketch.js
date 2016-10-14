@@ -52,6 +52,7 @@ class Chain {
       this.arms[i] = new Arm( currentCenter );
       currentCenter = this.arms[i].end;
     }
+    this.end = currentCenter;
   }
   
   evolve( dt ) {
@@ -61,11 +62,12 @@ class Chain {
       this.arms[i].rotate( dt );
       currentCenter = this.arms[i].end;
     }
+    this.end = currentCenter;
   }
   
   drawEnd() {
-    var x = this.arms[this.arms.length-1].end.x;
-    var y = this.arms[this.arms.length-1].end.y;
+    var x = this.end.x;
+    var y = this.end.y;
     fill( this.color );
     ellipse( x , y , drawSize , drawSize );
   }
