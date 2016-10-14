@@ -43,6 +43,7 @@ class Arm {
 
 class Chain {
   contructor( center , nArms ) {
+    this.n = nArms;
     console.log( 'Consturcting new Chain' );
     this.color = color( random(0,100) , 100 , 100 , fillAlpha );
     this.center = createVector( center.x , center.y );
@@ -55,7 +56,7 @@ class Chain {
   
   evolve( dt ) {
     var currentCenter = this.center;
-    for( var i = 0 ; i < nArms ; i++ ) {
+    for( var i = 0 ; i < this.n ; i++ ) {
       this.arms[i].center = currentCenter;
       this.arms[i].rotate( dt );
       currentCenter = this.arms[i].end;
