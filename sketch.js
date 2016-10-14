@@ -84,10 +84,12 @@ function setup() {
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
   C = new Chain( chainCenter, numArms );
+  
+  noStroke();
 }
 
 function draw() {
-  C.evolve( 0.1 );
+  C.evolve( 1 );
   C.drawEnd();
 }
   
