@@ -93,27 +93,27 @@ function setup() {
   background( bgColor );
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
-  /*
+  
   CA = new Array( numChains );
   for( var i = 0 ; i < numChains ; i++ ){
     CA[i] = new Chain( chainCenter, numArms );
   }
-  */
-  C = new Chain( chainCenter, numArms );
+  
+  //C = new Chain( chainCenter, numArms );
   noStroke();
 }
 
 function draw() {
   for( var j = 0 ; j < 100 ; j++ ) {
     
-    /*
+    
     for( var i = 0 ; i < numChains ; i++ ){
       CA[i].evolve( deltaT );
       CA[i].drawEnd();
     }
-    */
-    C.evolve( deltaT );
-    C.drawEnd();
+    
+    //C.evolve( deltaT );
+    //C.drawEnd();
   }
   //C.drawChain();
 }
