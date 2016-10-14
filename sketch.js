@@ -60,6 +60,7 @@ class Chain {
   
 Chain.prototype.evolve = function( dt ) {
   var currentCenter = this.centerP;
+  this.arms = new Array(this.n);
   for( var i = 0 ; i < this.n ; i++ ) {
     this.arms[i].centerP = currentCenter;
     this.arms[i].rotate( dt );
