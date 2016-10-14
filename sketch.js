@@ -67,7 +67,7 @@ Chain.prototype.evolve = function( dt ) {
   }
   this.end = currentCenter;
 
-  console.log( this.center );
+  console.log( this.centerP );
 }
 
 Chain.prototype.drawEnd = function() {
