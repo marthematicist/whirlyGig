@@ -77,6 +77,12 @@ Chain.prototype.drawEnd = function() {
   ellipse( x , y , drawSize , drawSize );
 }
 
+Chain.prototype.drawChain = function() {
+  for( var i = 0 ; i < this.n ; i++ ) {
+    line( this.arms[i].center.x , this.arms[i].center.y , this.arms[i].end.x , this.arms[i].end.y );
+  }
+}
+
 
 function setup() {
   console.log( 'hi there you' );
@@ -93,6 +99,7 @@ function setup() {
 function draw() {
   C.evolve( 0.1 );
   C.drawEnd();
+  C.drawChain();
 }
   
 
