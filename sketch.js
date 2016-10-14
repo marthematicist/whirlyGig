@@ -38,7 +38,7 @@ class Arm {
   
 Arm.prototype.rotate = function( dt ) {
   this.angle += this.angVel*dt;
-  this.end = createVector( this.centerP.x + this.radius*cos( this.angle ) , this.centerP.y + this.radius*sin( this.angle ) );
+  this.end = createVector( this.center.x + this.radius*cos( this.angle ) , this.center.y + this.radius*sin( this.angle ) );
 }
 
 
