@@ -95,7 +95,7 @@ function setup() {
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
   
-  CA = new array( numChains );
+  CA = new Array( numChains );
   for( var i = 0 ; i < numChains ; i++ ){
     CA[i] = new Chain( chainCenter, numArms );
   }
