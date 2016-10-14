@@ -8,7 +8,10 @@ setupGlobalVariables = function() {
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
   
+  deltaT = 0.005;
+  
   numArms = 3;
+  numChains = 4;
   minRadius = 0.1*minRes;
   maxRadius = maxRes / numArms * 0.8;
   
@@ -91,15 +94,24 @@ function setup() {
   background( bgColor );
   
   chainCenter = createVector( 0.5*xRes , 0.5*yRes );
-  C = new Chain( chainCenter, numArms );
+  
+  CA = new array( numChains );
+  for( var i = 0 ; i < numChains ; i++ ){
+    CA[i] = new Chain( chainCenter, numArms );
+  }
   
   noStroke();
 }
 
 function draw() {
   for( var i = 0 ; i < 100 ; i++ ) {
-    C.evolve( 0.01 );
-    C.drawEnd();
+    
+    for( var i = 0 ; i < numChains ; i++ ){
+      CA[i].evolve( deltaT );
+      CA[i].drawEnd();
+    }
+    
+    
   }
   //C.drawChain();
 }
