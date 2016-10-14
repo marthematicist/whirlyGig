@@ -44,7 +44,7 @@ class Arm {
 class Chain {
   contructor( center , nArms ) {
     this.n = nArms;
-    console.log( 'Consturcting new Chain' );
+    console.log( 'Constructing new Chain' );
     this.color = color( random(0,100) , 100 , 100 , fillAlpha );
     this.center = createVector( center.x , center.y );
     var currentCenter = createVector( center.x , center.y );
@@ -86,6 +86,7 @@ function setup() {
 }
 
 function draw() {
+  console.log( 'drawing' );
   C1.evolve( 0.1 );
   C1.drawEnd();
 }
