@@ -90,7 +90,7 @@ function setup() {
 }
 
 function draw() {
-  console.log( C1 );
+  console.log( C );
   C.evolve( 0.1 );
   C.drawEnd();
 }
