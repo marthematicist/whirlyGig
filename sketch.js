@@ -49,7 +49,7 @@ class Chain {
     this.color = color( random(0,100) , 100 , 100 , fillAlpha );
     this.center = createVector( centerIn.x , centerIn.y );
     var currentCenter = createVector( this.center.x , this.center.y );
-    console.log( currentCenter );
+    this.arms = new Array(this.n);
     for( var i = 0 ; i < nArms ; i++ ) {
       this.arms[i] = new Arm( currentCenter );
       currentCenter = this.arms[i].end;
@@ -60,7 +60,6 @@ class Chain {
   
 Chain.prototype.evolve = function( dt ) {
   var currentCenter = this.center;
-  this.arms = new Array(this.n);
   for( var i = 0 ; i < this.n ; i++ ) {
     this.arms[i].center = currentCenter;
     this.arms[i].rotate( dt );
@@ -88,7 +87,6 @@ function setup() {
 }
 
 function draw() {
-  console.log( C );
   C.evolve( 0.1 );
   C.drawEnd();
 }
