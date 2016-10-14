@@ -97,7 +97,7 @@ function setup() {
 }
 
 function draw() {
-  C.evolve( 0.1 );
+  C.evolve( 0.01 );
   C.drawEnd();
   C.drawChain();
 }
