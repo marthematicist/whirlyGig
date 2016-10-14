@@ -105,12 +105,14 @@ function setup() {
 function draw() {
   for( var j = 0 ; j < 100 ; j++ ) {
     
+    /*
     for( var i = 0 ; i < numChains ; i++ ){
       CA[i].evolve( deltaT );
       CA[i].drawEnd();
     }
-    
-    
+    */
+    CA[1].evolve( deltaT );
+    CA[1].drawEnd();
   }
   //C.drawChain();
 }
