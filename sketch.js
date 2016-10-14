@@ -54,7 +54,7 @@ class Chain {
   }
   
   evolve( dt ) {
-    var currentCenter = createVector( this.center.x , this.center.y );
+    var currentCenter = this.center;
     for( var i = 0 ; i < nArms ; i++ ) {
       this.arms[i].center = currentCenter;
       this.arms[i].rotate( dt );
