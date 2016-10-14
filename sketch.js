@@ -19,7 +19,7 @@ setupGlobalVariables = function() {
   bgColor = color( 0 , 0 , 100 , 1 );
   fillAlpha = 0.2;
   chainColor1 = color( random(0,100) , 100 , 100 , fillAlpha );
-  drawSize = minRes*0.01;
+  drawSize = minRes*0.001;
   
 }
 
