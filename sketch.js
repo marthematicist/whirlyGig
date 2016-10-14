@@ -64,11 +64,11 @@ class Chain {
       currentCenter = this.arms[i].end;
     }
     this.end = currentCenter;
-    console.log( this.end );
+    console.log( currentCenter );
   }
   
   drawEnd() {
-    console.log( this.end );
+    //console.log( this.end );
     var x = this.end.x;
     var y = this.end.y;
     fill( this.color );
