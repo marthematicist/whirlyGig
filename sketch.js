@@ -49,6 +49,7 @@ class Chain {
     this.color = color( random(0,100) , 100 , 100 , fillAlpha );
     this.center = createVector( centerIn.x , centerIn.y );
     var currentCenter = createVector( this.center.x , this.center.y );
+    console.log( currentCenter );
     for( var i = 0 ; i < nArms ; i++ ) {
       this.arms[i] = new Arm( currentCenter );
       currentCenter = this.arms[i].end;
@@ -66,12 +67,9 @@ Chain.prototype.evolve = function( dt ) {
     currentCenter = this.arms[i].end;
   }
   this.end = currentCenter;
-
-  console.log( this.center );
 }
 
 Chain.prototype.drawEnd = function() {
-  //console.log( this.end );
   var x = this.end.x;
   var y = this.end.y;
   fill( this.color );
