@@ -64,7 +64,7 @@ class Chain {
       currentCenter = this.arms[i].end;
     }
     this.end = currentCenter;
-    console.log( currentCenter );
+    console.log( this.center );
   }
   
   drawEnd() {
