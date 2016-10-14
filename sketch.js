@@ -43,7 +43,7 @@ Arm.prototype.rotate = function( dt ) {
 
 
 class Chain {
-  contructor( centerIn , nArms ) {
+  constructor( centerIn , nArms ) {
     this.n = nArms;
     console.log( 'Constructing new Chain' );
     this.color = color( random(0,100) , 100 , 100 , fillAlpha );
