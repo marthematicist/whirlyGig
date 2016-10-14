@@ -67,6 +67,7 @@ class Chain {
   }
   
   drawEnd() {
+    
     var x = this.end.x;
     var y = this.end.y;
     fill( this.color );
